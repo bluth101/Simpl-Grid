@@ -1,0 +1,79 @@
+/* Customisation */
+:root {
+	--col-padding: 5px;
+	--container-width: 750px; /* This is based on new.css - May need to change to make it fit different themes */
+}
+
+/* Utility */
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.fluid {
+	width: 100%;
+	box-sizing: border-box;
+}
+.pad-0 { padding: 0px !important; }
+.pad-1 { padding: 5px !important; }
+.pad-2 { padding: 10px !important; }
+.pad-3 { padding: 20px !important; }
+.rounded { border-radius: 10px;  }
+.round { border-radius: 100%; }
+
+/* Grid Layout */
+.row {
+	width: 100%;
+	height: 100%;
+	font-size: 0px;
+	box-sizing: border-box;
+}
+.row, .fluid {
+	white-space: nowrap;
+}
+
+.col-1 { width: 8.333%; }
+.col-2 { width: 16.666%; }
+.col-3 { width: 24.999%; }
+.col-4 { width: 33.332%; }
+.col-5 { width: 41.665%; }
+.col-6 { width: 49.998%; }
+.col-7 { width: 58.331%; }
+.col-8 { width: 66.664%; }
+.col-9 { width: 74.997%; }
+.col-10 { width: 83.330%; }
+.col-11 { width: 91.663%; }
+.col-12 { width: 100%; }
+.push-1 { margin-left: 8.333%; }
+.push-2 { margin-left: 16.666%; }
+.push-3 { margin-left: 24.999%; }
+.push-4 { margin-left: 33.332%; }
+.push-5 { margin-left: 41.665%; }
+.push-6 { margin-left: 49.998%; }
+.push-7 { margin-left: 58.331%; }
+.push-8 { margin-left: 66.664%; }
+.push-9 { margin-left: 74.997%; }
+.push-10 { margin-left: 83.330%; }
+.push-11 { margin-left: 91.663%; }
+
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+	padding: var(--col-padding);
+	box-sizing: border-box;
+	display: inline-block;
+	vertical-align: text-top;
+	white-space: normal;
+	font-size: initial;
+}
+.desktop-only { visibility: visible; }
+.mobile-only { visibility: hidden; }
+
+@media only screen and (max-width: 750px) {
+	.desktop-only { visibility: hidden; }
+	.mobile-only { visibility: visible; }
+	.container { width: 100%; }
+	.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+		width: 100%;
+		display: block;
+	}
+	.push-1, .push-2, .push-3, .push-4, .push-5, .push-6, .push-7, .push-8, .push-9, .push-10, .push-11 {
+		margin-left: 0px;
+	}
+}

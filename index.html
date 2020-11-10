@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="new.css">
+		<link rel="stylesheet" type="text/css" href="grid.css">
+		<style>
+			html {
+				background-image: url("background.png");
+				background-repeat: repeat-x;
+			}
+			.bg {
+				background-color: var(--nc-bg-3);
+				border: 2px solid var(--nc-bg-1);
+			}
+			h3 {
+				font-weight: normal;
+			}
+		</style>
+
+		<title>Simpl Grid</title>
+	</head>
+
+	<body>
+		<a id="top"></a>
+		<div class="row">
+			<div class="col-12 text-center">
+				<h1>Simpl Grid</h1><br>
+				<a href=""><button>Download</button></a>
+				<br><br>
+
+				<div class="bg pad-3">A simple and responsive grid for use with classless CSS.</div>
+			</div>
+		</div>
+		<hr>
+			<div class="text-center">
+				<a href="#grid">Grid</a> /
+				<a href="#utility">Utility Classes</a> /
+				<a href="#about">What is classless css?</a> /
+				<a href="">GitHub</a>
+			</div>
+		<hr>
+
+		<a id="grid"></a>
+		<h2>The Grid</h2>
+		<p>Standard 12 column grid. Extra classes for "pushing" columns along.</p>
+
+		<!-- Grid display -->
+		<div class="text-center">
+			<div class="row">
+				<div class="col-12 bg">.col-12</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-6 bg">.col-6</div>
+				<div class="col-6 bg">.col-6</div>
+			</div>
+
+			<div class="row">
+				<div class="col-4 bg">.col-4</div>
+				<div class="col-4 bg">.col-4</div>
+				<div class="col-4 bg">.col-4</div>
+			</div>
+
+			<div class="row">
+				<div class="col-3 bg">.col-3</div>
+				<div class="col-3 bg">.col-3</div>
+				<div class="col-3 bg">.col-3</div>
+				<div class="col-3 bg">.col-3</div>
+			</div>
+
+			<div class="row">
+				<div class="col-2 bg">.col-2</div>
+				<div class="col-2 bg">.col-2</div>
+				<div class="col-2 bg">.col-2</div>
+				<div class="col-2 bg">.col-2</div>
+				<div class="col-2 bg">.col-2</div>
+				<div class="col-2 bg">.col-2</div>
+			</div>
+
+			<div class="row">
+				<div class="col-1 bg">.col-1</div><div class="col-1 bg">.col-1</div><div class="col-1 bg">.col-1</div>
+				<div class="col-1 bg">.col-1</div><div class="col-1 bg">.col-1</div><div class="col-1 bg">.col-1</div>
+				<div class="col-1 bg">.col-1</div><div class="col-1 bg">.col-1</div><div class="col-1 bg">.col-1</div>
+				<div class="col-1 bg">.col-1</div><div class="col-1 bg">.col-1</div><div class="col-1 bg">.col-1</div>
+			</div>
+
+			<br>
+			<!-- Examples of pushing -->
+			<div class="row">
+				<div class="col-4 push-2 bg">.col-4 .push-2</div>
+				<div class="col-4 bg">.col-4</div>
+			</div>
+			<div class="row">
+				<div class="col-7 push-1 bg">.col-7 .push-1</div>
+				<div class="col-3 push-1 bg">.col-3 .push-1</div>
+			</div>
+		</div>
+		<br>
+		<p>Columns must be placed inside a <code>.row</code> in order to function properly, though you can use them outside. It's best practice to ensure the number of cols per row does not exceed 12.</p>
+		<details>
+			<summary>Examples of usage</summary>
+			<pre>&lt;!-- Good practice - Two equal columns, total cols <= 12 --&gt;
+&lt;div class="row"&gt;
+	&lt;div class="col-6"&gt;&lt;/div&gt;
+	&lt;div class="col-6"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Bad practice - Total cols > 12 --&gt;
+&lt;div class="row"&gt;
+	&lt;div class="col-6"&gt;&lt;/div&gt;
+	&lt;div class="col-6"&gt;&lt;/div&gt;
+
+	&lt;div class="col-7"&gt;&lt;/div&gt;
+	&lt;div class="col-5"&gt;&lt;/div&gt;
+&lt;/div&gt;
+			</pre>
+		</details>
+		<details>
+			<summary>Available classes</summary>
+			<p>The below classes should be used in a div inside a <code>row</code>.</p>
+			<table>
+				<tr>
+					<th>Columns</th>
+					<th>Pushing</th>
+				</tr>
+				<tr>
+					<td>
+						<code>col-12</code>
+						<code>col-11</code>
+						<code>col-10</code>
+						<code>col-9</code>
+						<code>col-8</code>
+						<code>col-7</code>
+						<code>col-6</code>
+						<code>col-5</code>
+						<code>col-4</code>
+						<code>col-3</code>
+						<code>col-2</code>
+						<code>col-1</code>
+					</td>
+					<td>
+						<code>push-11</code>
+						<code>push-10</code>
+						<code>push-9</code>
+						<code>push-8</code>
+						<code>push-7</code>
+						<code>push-6</code>
+						<code>push-5</code>
+						<code>push-4</code>
+						<code>push-3</code>
+						<code>push-2</code>
+						<code>push-1</code>
+					</td>
+				</tr>
+			</table>
+		</details>
+		<div class="text-right"><a href="#top">To top</a></div>
+		<hr>
+		<a id="utility"></a>
+		<h2>Utility Classes</h2>
+		<p>Quality of life tools, you can of course edit the file to add more!</p>
+
+		<h3>Desktop / Mobile only</h3>
+		<div class="desktop-only">You're viewing from a device with a large screen! (Will change with page re-size)</div>
+		<div class="mobile-only">You're viewing from a small screen!</div>
+		<div class="row">
+			<div class="col-6">
+				<blockquote>
+					<code>.desktop-only</code>
+					<p class="pad-1">Element will only be visible while the site is not in mobile mode.</p>
+				</blockquote>
+			</div>
+			<div class="col-6">
+				<blockquote>
+					<code>.mobile-only</code>
+					<p class="pad-1">Element will only be visible while the site is in mobile mode. (Default <750px width)</p>
+				</blockquote>
+			</div>
+		</div>
+
+		<details>
+			<summary>Example: Mobile navbar</summary>
+			<h4>Desktop</h4>
+			<a href="#utility">Home</a> / <a href="#utility">About</a> /
+			<a href="#utility">Contact</a>
+			<hr>
+			<h4>Mobile</h4>
+			<details>
+				<summary>Menu</summary>
+				<ul>
+					<li><a href="#utility">Home</a></li>
+					<li><a href="#utility">About</a></li>
+					<li><a href="#utility">Contact</a></li>
+				</li>
+			</details>
+		</details>
+
+		<h3>Text alignment</h3>
+		<div class="text-left"><code>.text-left</code></div>
+		<div class="text-center"><code>.text-center</code></div>
+		<div class="text-right"><code>.text-right</code></div>
+
+		<h3>Styling</h3>
+		<div class="row">
+			<div class="col-3 pad-0 bg"><code>.pad-0</code></div>
+			<div class="col-3 pad-1 bg"><code>.pad-1</code></div>
+			<div class="col-3 pad-2 bg"><code>.pad-2</code></div>
+			<div class="col-3 pad-3 bg"><code>.pad-3</code></div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-6 pad-2">
+				<code>.rounded</code>
+				<img src="image.jpg" class="rounded">
+				<small>Photo by Evgeny Tchebotarev from Pexels</small>
+			</div>
+			<div class="col-6">
+				<code>.round</code>
+				<img src="image.jpg" class="round">
+			</div>
+		</div>
+
+		<h3>Layout</h3>
+		<blockquote>
+			<code>.fluid</code><br>
+			The fluid class will make elements use 100% for width.
+		</blockquote>
+		<div class="row">
+			<div class="col-6 pad-2 bg">
+				Without fluid<br>
+				<input type="text" placeholder="input box..">
+				<input type="submit">
+			</div>
+			<div class="col-6 pad-2 bg">
+				With fluid
+				<input type="text" class="fluid" placeholder="input box..">
+				<input type="submit" class="fluid">
+			</div>
+		</div>
+		
+		<div class="text-right"><a href="#top">To top</a></div>
+		<hr>
+
+		<a id="about"></a>
+		<h2>Classless CSS</h2>
+		<p>This is a trend that has come about after the release of HTML5; specifically the new semantic tags available such as <code>&lt;header&gt;</code>, <code>&lt;details&gt;</code>, and <code>&lt;blockquote&gt;</code>. The idea behind it is that you can create a web page without the use of any CSS classes. This does of course have it's limitations and ultimately the sites that you can create with this are rather limited, however with this project I hope to broaden that range.</p>
+		<p>By using Simpl Grid, it does of course mean that your site will no longer be classless, but the focus of this project is entirely layout and utility based, so the styling will still be left completely to the main stylesheet.</p>
+		<p>I encourage everyone to try creating a classless site; it's a great tool for those learning about HTML and CSS, and it's good for professionals too as it challenges them to see what they can achieve with a limited toolset, and to learn about the new semantic tags. One of my favorite things is the ability to essentially change "themes" akin to that of Wordpress or Wix, as all you have to do is link a different classless sheet and your site now has a new design!</p>
+		<div class="text-right"><a href="#top">To top</a></div>
+		<hr>
+	</body>
+</html>
